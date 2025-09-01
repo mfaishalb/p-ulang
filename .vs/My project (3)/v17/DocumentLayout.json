@@ -1,0 +1,198 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Muhammad Faishal\\My project (3)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|c:\\users\\muhammad faishal\\my project (3)\\assets\\sci-fi styled modular pack\\script\\fadescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\sci-fi styled modular pack\\script\\fadescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|c:\\users\\muhammad faishal\\my project (3)\\assets\\sci-fi styled modular pack\\script\\fadescene1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\sci-fi styled modular pack\\script\\fadescene1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\My project (3)\\assets\\sci-fi styled modular pack\\script\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\sci-fi styled modular pack\\script\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\My project (3)\\assets\\sci-fi styled modular pack\\script\\holdscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\sci-fi styled modular pack\\script\\holdscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\My project (3)\\assets\\yurowm\\demo\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\yurowm\\demo\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\My project (3)\\assets\\sci-fi styled modular pack\\script\\door_3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\sci-fi styled modular pack\\script\\door_3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\My project (3)\\assets\\malenpc\\npcmale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\malenpc\\npcmale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\My project (3)\\assets\\sci-fi styled modular pack\\script\\openweb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\sci-fi styled modular pack\\script\\openweb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\My project (3)\\assets\\yurowm\\demo\\scripts\\characterviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\yurowm\\demo\\scripts\\characterviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\My project (3)\\assets\\yurowm\\demo\\scripts\\charcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\yurowm\\demo\\scripts\\charcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\My project (3)\\assets\\yurowm\\demo\\scripts\\actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AB3609-15DB-52E3-4D4E-5A489B4C4689}|Assembly-CSharp.csproj|solutionrelative:assets\\yurowm\\demo\\scripts\\actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fadescene1.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\fadescene1.cs",
+              "RelativeDocumentMoniker": "Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\fadescene1.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\fadescene1.cs",
+              "RelativeToolTip": "Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\fadescene1.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwC4AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T13:35:37.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fadescene.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\fadescene.cs",
+              "RelativeDocumentMoniker": "Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\fadescene.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\fadescene.cs",
+              "RelativeToolTip": "Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\fadescene.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwC4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T13:30:40.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mainmenu.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\Mainmenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\Mainmenu.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\Mainmenu.cs",
+              "RelativeToolTip": "Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\Mainmenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T08:36:16.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HoldScreen.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\HoldScreen.cs",
+              "RelativeDocumentMoniker": "Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\HoldScreen.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\HoldScreen.cs",
+              "RelativeToolTip": "Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\HoldScreen.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T15:09:12.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "npcmale.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\MALENPC\\npcmale.cs",
+              "RelativeDocumentMoniker": "Assets\\MALENPC\\npcmale.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\MALENPC\\npcmale.cs",
+              "RelativeToolTip": "Assets\\MALENPC\\npcmale.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAUwCkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:12:43.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "openweb.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\openweb.cs",
+              "RelativeDocumentMoniker": "Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\openweb.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\openweb.cs",
+              "RelativeToolTip": "Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\openweb.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAUwB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T14:20:52.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "door_3.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\door_3.cs",
+              "RelativeDocumentMoniker": "Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\door_3.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\door_3.cs",
+              "RelativeToolTip": "Assets\\Sci-Fi Styled Modular Pack\\SCRIPT\\door_3.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAIBQwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T08:17:52.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Yurowm\\Demo\\Scripts\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Yurowm\\Demo\\Scripts\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Yurowm\\Demo\\Scripts\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Yurowm\\Demo\\Scripts\\PlayerController.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAqwAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T09:46:28.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CharController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Yurowm\\Demo\\Scripts\\CharController.cs",
+              "RelativeDocumentMoniker": "Assets\\Yurowm\\Demo\\Scripts\\CharController.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Yurowm\\Demo\\Scripts\\CharController.cs",
+              "RelativeToolTip": "Assets\\Yurowm\\Demo\\Scripts\\CharController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T09:45:16.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Actions.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Yurowm\\Demo\\Scripts\\Actions.cs",
+              "RelativeDocumentMoniker": "Assets\\Yurowm\\Demo\\Scripts\\Actions.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Yurowm\\Demo\\Scripts\\Actions.cs",
+              "RelativeToolTip": "Assets\\Yurowm\\Demo\\Scripts\\Actions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T08:57:38.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CharacterViewer.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Yurowm\\Demo\\Scripts\\CharacterViewer.cs",
+              "RelativeDocumentMoniker": "Assets\\Yurowm\\Demo\\Scripts\\CharacterViewer.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\My project (3)\\Assets\\Yurowm\\Demo\\Scripts\\CharacterViewer.cs",
+              "RelativeToolTip": "Assets\\Yurowm\\Demo\\Scripts\\CharacterViewer.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBJwAkAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T08:56:21.756Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
