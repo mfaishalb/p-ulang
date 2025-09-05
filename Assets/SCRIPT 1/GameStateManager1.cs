@@ -1,49 +1,62 @@
-// 8/20/2025 AI-Tag
-// This was created with the help of Assistant, a Unity Artificial Intelligence product.
-
-using System;
-using UnityEditor;
 using UnityEngine;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
-public class GameStateManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public string lastSabotageTarget;
-    public static GameStateManager Instance { get; private set; }
+    public static GameManager instance;
 
-    // Data yang disimpan
-    public Vector3 PlayerPosition { get; set; }
-    public Quaternion PlayerRotation { get; set; }
-    public Dictionary<string, bool> ObjectStates { get; private set; } = new Dictionary<string, bool>();
+    // DRAG & DROP OBJEK-OBJEK INI DARI SCENE UTAMA KE INSPECTOR
+    [Header("Main Scene Objects")]
+    public GameObject playerObject;
+    public GameObject mainCanvas;
+    public GameObject mainCanvas1;// Canvas utama yang berisi HUD, dll
+    public Camera mainCamera;
 
-    private void Awake()
+    private SabotageableObject currentSabotageSource;
+    private string currentMinigameScene;
+
+    void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
+        // ... (kode Awake tetap sama) ...
+        if (instance == null) {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else {
             Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
-
-    // Fungsi untuk menyimpan status objek
-    public void SaveObjectState(string objectId, bool state)
-    {
-        if (ObjectStates.ContainsKey(objectId))
-        {
-            ObjectStates[objectId] = state;
-        }
-        else
-        {
-            ObjectStates.Add(objectId, state);
         }
     }
 
-    // Fungsi untuk mengambil status objek
-    public bool GetObjectState(string objectId)
+    public void StartMinigame(string sceneName, SabotageableObject source)
     {
-        return ObjectStates.ContainsKey(objectId) && ObjectStates[objectId];
+        this.currentSabotageSource = source;
+        this.currentMinigameScene = sceneName;
+
+        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+
+        // SEMBUNYIKAN SEMUA ELEMEN SCENE UTAMA
+        if (playerObject != null) playerObject.SetActive(false);
+        if (mainCanvas != null) mainCanvas.SetActive(false);
+        if (mainCanvas != null) mainCanvas1.SetActive(false);
+        if (mainCamera != null) mainCamera.gameObject.SetActive(false);
+
+        // Kita tidak perlu Time.timeScale = 0f lagi karena playernya sudah nonaktif
+    }
+
+    public void EndMinigame(bool wasSuccessful)
+    {
+        SceneManager.UnloadSceneAsync(currentMinigameScene);
+
+        // TAMPILKAN KEMBALI SEMUA ELEMEN SCENE UTAMA
+        if (playerObject != null) playerObject.SetActive(true);
+        if (mainCanvas != null) mainCanvas.SetActive(true);
+        if (mainCanvas != null) mainCanvas1.SetActive(true);
+        if (mainCamera != null) mainCamera.gameObject.SetActive(true);
+
+        if (wasSuccessful && currentSabotageSource != null)
+        {
+            currentSabotageSource.ResolveSabotage();
+        }
+        
+        currentSabotageSource = null;
     }
 }

@@ -3,11 +3,59 @@
   "WorkspaceRootPath": "C:\\Users\\Muhammad Faishal\\p ulang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|c:\\users\\muhammad faishal\\p ulang\\assets\\malenpc\\npcmale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\p ulang\\assets\\script 1\\sabotagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\script 1\\sabotagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|c:\\users\\muhammad faishal\\p ulang\\assets\\script 1\\gamestatemanager1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\script 1\\gamestatemanager1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|c:\\users\\muhammad faishal\\p ulang\\assets\\script 1\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\script 1\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|c:\\users\\muhammad faishal\\p ulang\\assets\\script 1\\minigamesetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\script 1\\minigamesetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\p ulang\\assets\\script 1\\sabotage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\script 1\\sabotage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\p ulang\\assets\\script 1\\interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\script 1\\interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\p ulang\\assets\\script 1\\hudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\script 1\\hudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\p ulang\\assets\\script 1\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\script 1\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\p ulang\\assets\\script\\wiringmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\wiringmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\SCRIPT\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\p ulang\\assets\\wire\\wire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\wire\\wire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\p ulang\\assets\\script\\wirenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\wirenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\p ulang\\assets\\malenpc\\npcmale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\malenpc\\npcmale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|c:\\users\\muhammad faishal\\p ulang\\assets\\script 1\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|C:\\Users\\Muhammad Faishal\\p ulang\\assets\\script 1\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\script 1\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -26,11 +74,158 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameStateManager1.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\GameStateManager1.cs",
+              "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\GameStateManager1.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\GameStateManager1.cs",
+              "RelativeToolTip": "Assets\\SCRIPT 1\\GameStateManager1.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAgwDkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T10:18:17.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\Main.cs",
+              "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\Main.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\Main.cs",
+              "RelativeToolTip": "Assets\\SCRIPT 1\\Main.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwEAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T09:57:01.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MinigameSetting.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\MinigameSetting.cs",
+              "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\MinigameSetting.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\MinigameSetting.cs",
+              "RelativeToolTip": "Assets\\SCRIPT 1\\MinigameSetting.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T02:30:55.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "sabotage.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\sabotage.cs",
+              "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\sabotage.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\sabotage.cs",
+              "RelativeToolTip": "Assets\\SCRIPT 1\\sabotage.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAArwBEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T05:32:51.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Interactable.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\Interactable.cs",
+              "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\Interactable.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\Interactable.cs",
+              "RelativeToolTip": "Assets\\SCRIPT 1\\Interactable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T05:31:19.679Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SabotageManager.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\SabotageManager.cs",
+              "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\SabotageManager.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\SabotageManager.cs",
+              "RelativeToolTip": "Assets\\SCRIPT 1\\SabotageManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T05:30:25.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HUDController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\HUDController.cs",
+              "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\HUDController.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\HUDController.cs",
+              "RelativeToolTip": "Assets\\SCRIPT 1\\HUDController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T09:57:12.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Wire.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\Wire\\Wire.cs",
+              "RelativeDocumentMoniker": "Assets\\Wire\\Wire.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\Wire\\Wire.cs",
+              "RelativeToolTip": "Assets\\Wire\\Wire.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T02:26:26.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WiringManager.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\WiringManager.cs",
+              "RelativeDocumentMoniker": "Assets\\SCRIPT\\WiringManager.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\WiringManager.cs",
+              "RelativeToolTip": "Assets\\SCRIPT\\WiringManager.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAswBwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T08:33:04.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "wirenode.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\wirenode.cs",
+              "RelativeDocumentMoniker": "Assets\\SCRIPT\\wirenode.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\wirenode.cs",
+              "RelativeToolTip": "Assets\\SCRIPT\\wirenode.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T08:32:46.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NewBehaviourScript.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\NewBehaviourScript.cs",
+              "RelativeDocumentMoniker": "Assets\\SCRIPT\\NewBehaviourScript.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\NewBehaviourScript.cs",
+              "RelativeToolTip": "Assets\\SCRIPT\\NewBehaviourScript.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T08:19:47.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlayerInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\PlayerInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\PlayerInteraction.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\PlayerInteraction.cs",
+              "RelativeToolTip": "Assets\\SCRIPT 1\\PlayerInteraction.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAmwGQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T04:47:53.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "npcmale.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\MALENPC\\npcmale.cs",
               "RelativeDocumentMoniker": "Assets\\MALENPC\\npcmale.cs",
@@ -38,12 +233,11 @@
               "RelativeToolTip": "Assets\\MALENPC\\npcmale.cs",
               "ViewState": "AQIAACQAAAAAAAAAAAAYwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T09:09:51.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-31T09:09:51.699Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\PlayerMovement.cs",
@@ -51,12 +245,11 @@
               "RelativeToolTip": "Assets\\SCRIPT 1\\PlayerMovement.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAADwvyMAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T08:07:23.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-31T08:07:23.753Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 15,
               "Title": "Actions.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\Actions.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\Actions.cs",
@@ -68,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
               "Title": "Actions.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\Yurowm\\Demo\\Scripts\\Actions.cs",
               "RelativeDocumentMoniker": "Assets\\Yurowm\\Demo\\Scripts\\Actions.cs",
