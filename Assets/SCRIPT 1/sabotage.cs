@@ -1,50 +1,79 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class SabotageObject : Interactable
+// SabotageableObject adalah sebuah Interactable, tapi dengan fitur tambahan.
+public class SabotageableObject : Interactable
 {
-    public bool isFixed = true;
-    public GameObject warningSign;
-    public float sabotageDuration = 10f;
+    [Header("Sabotage Settings")]
+    // Drag & drop GameObject tanda seru "!" ke sini di Inspector
+    public GameObject sabotageIndicator;
+    public string sabotageMessage = "Perbaiki kerusakan"; // Pesan saat disabotase
 
-    private float timer;
+    private bool isSabotaged = false;
 
-    public void TriggerAttack()
+    [Header("Minigame Settings")]
+    public string minigameSceneName;
+
+    // Kita gunakan Start dari parent, tapi tambahkan logika kita sendiri.
+    void Start()
     {
-        isFixed = false;
-        warningSign.SetActive(true);
-        timer = sabotageDuration;
-    }
+        // Pastikan outline didapatkan dari kelas dasar (Interactable)
+        outline = GetComponent<Outline>();
+        DisableOutline(); // Ini fungsi dari Interactable
 
-    public void Fix()
-    {
-        isFixed = true;
-        warningSign.SetActive(false);
-    }
-
-    void Update()
-    {
-        if (!isFixed)
+        // Logika tambahan khusus untuk SabotageableObject
+        if (sabotageIndicator != null)
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0f)
-            {
-                Debug.Log("Game Over");
-                
-            }
+            sabotageIndicator.SetActive(false);
         }
     }
 
-    public override void Interact() // override Interactable
+    // Fungsi ini akan dipanggil oleh SabotageManager
+    public void ActivateSabotage()
     {
-        if (!isFixed)
+        isSabotaged = true;
+        message = sabotageMessage; // Ganti pesan interaksi saat disabotase
+        if (sabotageIndicator != null)
         {
-            base.Interact(); // tetap jalanin UnityEvent → misal buka puzzle atau hold task
+            sabotageIndicator.SetActive(true);
         }
     }
-    public void OpenWireTask()
+
+    // Kita 'menimpa' fungsi Interact() dari parent dengan logika baru
+    public override void Interact()
     {
-        GameStateManager.Instance.lastSabotageTarget = gameObject.name;
-        SceneManager.LoadScene("wiretask");
+        if (!isSabotaged)
+        {
+            Debug.Log(gameObject.name + " sedang tidak rusak.");
+            return;
+        }
+
+        // JANGAN panggil Resolve() di sini lagi.
+        // Panggil GameManager untuk memulai minigame.
+        if (GameManager.instance != null && !string.IsNullOrEmpty(minigameSceneName))
+        {
+            GameManager.instance.StartMinigame(minigameSceneName, this);
+        }
+        else
+        {
+            Debug.LogError("GameManager tidak ditemukan atau nama scene minigame kosong!");
+        }
+    }
+
+    // Ubah nama Resolve() agar lebih jelas dan buat jadi public
+    // Fungsi ini sekarang akan dipanggil oleh GameManager
+    public void ResolveSabotage()
+    {
+        isSabotaged = false;
+        if (sabotageIndicator != null)
+        {
+            sabotageIndicator.SetActive(false);
+        }
+
+        // LAPOR KEMBALI KE MANAJER SABOTASE BAHWA SEMUA BERES!
+        if (SabotageManager.instance != null)
+        {
+            SabotageManager.instance.SabotageResolved();
+        }
     }
 }

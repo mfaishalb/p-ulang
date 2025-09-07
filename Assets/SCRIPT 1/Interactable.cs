@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
-    
-    Outline outline;
+
+    protected Outline outline;
     public string message;
 
     public UnityEvent onInteraction;

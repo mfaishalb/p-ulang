@@ -1,36 +1,89 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class SabotageManager : MonoBehaviour
 {
-    public List<SabotageObject> sabotageObjects;
-    public float minInterval = 20f;
-    public float maxInterval = 30f;
+    public static SabotageManager instance;
 
-    private void Start()
+    // Masukkan semua objek yang bisa disabotase ke list ini melalui Inspector
+    public List<SabotageableObject> sabotageableObjects;
+
+    [Header("Timing Settings")]
+    public float timeBetweenSabotages = 20f; // Waktu jeda antar sabotase (detik)
+    public float sabotageDuration = 30f;   // Waktu untuk memperbaiki sebelum Game Over (detik)
+
+    private bool isSabotageActive = false;
+    private float sabotageTimer;
+    private float timeUntilNextSabotage;
+
+    void Awake()
     {
-        StartCoroutine(SabotageRoutine());
+        instance = this;
     }
 
-    private IEnumerator SabotageRoutine()
+    void Start()
     {
-        while (true)
+        // Mulai hitung mundur menuju sabotase pertama
+        timeUntilNextSabotage = timeBetweenSabotages;
+    }
+
+    void Update()
+    {
+        if (isSabotageActive)
         {
-            yield return new WaitForSeconds(Random.Range(minInterval, maxInterval));
+            // Jika ada sabotase aktif, jalankan timer Game Over
+            sabotageTimer -= Time.deltaTime;
+            Debug.Log("Waktu tersisa: " + sabotageTimer); // Untuk debug
 
-            // kalau masih ada object yang belum difix → skip
-            if (sabotageObjects.Exists(o => !o.isFixed))
-                continue;
-
-            // pilih random object yang ready
-            List<SabotageObject> candidates = sabotageObjects.FindAll(o => o.isFixed);
-            if (candidates.Count > 0)
+            if (sabotageTimer <= 0)
             {
-                SabotageObject chosen = candidates[Random.Range(0, candidates.Count)];
-                chosen.TriggerAttack();
-                Debug.Log("Sabotage: " + chosen.name);
+                GameOver();
+                isSabotageActive = false; // Hentikan proses update
             }
         }
+        else
+        {
+            // Jika tidak ada sabotase, hitung mundur ke sabotase berikutnya
+            timeUntilNextSabotage -= Time.deltaTime;
+            if (timeUntilNextSabotage <= 0)
+            {
+                StartNewSabotage();
+            }
+        }
+    }
+
+    void StartNewSabotage()
+    {
+        if (sabotageableObjects.Count == 0) return; // Jangan lakukan apa-apa jika list kosong
+
+        isSabotageActive = true;
+
+        // Pilih objek random dari list
+        int randomIndex = Random.Range(0, sabotageableObjects.Count);
+        SabotageableObject target = sabotageableObjects[randomIndex];
+
+        // Aktifkan sabotase pada objek tersebut
+        target.ActivateSabotage();
+        Debug.Log("Sabotase dimulai pada: " + target.gameObject.name);
+
+        // Reset timer Game Over
+        sabotageTimer = sabotageDuration;
+    }
+
+    // Fungsi ini akan dipanggil oleh objek yang sudah diperbaiki
+    public void SabotageResolved()
+    {
+        Debug.Log("Sabotase berhasil diperbaiki!");
+        isSabotageActive = false;
+        // Reset timer untuk sabotase berikutnya
+        timeUntilNextSabotage = timeBetweenSabotages;
+    }
+
+    void GameOver()
+    {
+        Debug.Log("GAME OVER! Waktu habis.");
+        // Di sini kamu bisa menambahkan logika untuk menampilkan layar Game Over, dll.
+        Time.timeScale = 0; // Contoh: memberhentikan game
     }
 }

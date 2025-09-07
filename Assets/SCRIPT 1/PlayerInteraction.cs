@@ -21,57 +21,57 @@ public class PlayerInteraction : MonoBehaviour
         {
             currentInteractable.Interact();
         }
-        if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null)
-        {
-            IPickable pickable = currentInteractable.GetComponent<IPickable>();
-            if (pickable != null)
-            {
-                ItemPickable itemPickable = currentInteractable.GetComponent<ItemPickable>();
-                if (itemPickable != null)
-                {
-                    PlayerInventory playerInventory = GetComponent<PlayerInventory>();
-                    playerInventory.AddItem(itemPickable.itemScriptableObject.item_type);
-                    pickable.PickItem();
-                }
-            }
-            else
-            {
-                currentInteractable.Interact();
-            }
-        }
+       
     }
 
     void CheckInteraction()
     {
-        if (playerCamera == null) return;
+        // Tentukan titik pusat untuk 'bola' pengecekan, misalnya sedikit di depan pemain
+        Vector3 checkPosition = transform.position + (transform.forward * 1.0f); // 1m di depan pemain
+        float checkRadius = 1.5f; // Radius 'bola' pengecekan
 
-        Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * playerReach, Color.red);
+        // Dapatkan semua collider yang masuk ke dalam 'bola'
+        Collider[] colliders = Physics.OverlapSphere(checkPosition, checkRadius);
 
-        RaycastHit hit;
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, playerReach))
+        Interactable closestInteractable = null;
+        float minDistance = float.MaxValue;
+
+        // Cari objek interactable terdekat dari semua yang terdeteksi
+        foreach (Collider col in colliders)
         {
-            if (hit.collider.CompareTag("Interactable"))
+            if (col.CompareTag("Interactable"))
             {
-                Interactable newInteractable = hit.collider.GetComponent<Interactable>();
-
-                if (newInteractable != null && newInteractable.enabled)
+                Interactable interactable = col.GetComponent<Interactable>();
+                if (interactable != null && interactable.enabled)
                 {
-                    SetNewCurrentInteractable(newInteractable);
+                    float distance = Vector3.Distance(transform.position, col.transform.position);
+                    if (distance < minDistance)
+                    {
+                        minDistance = distance;
+                        closestInteractable = interactable;
+                    }
                 }
-                else
-                {
-                    DisableCurrentInteractable();
-                }
-            }
-            else
-            {
-                DisableCurrentInteractable();
             }
         }
-        else
+
+        // Jika kita menemukan objek interactable terdekat
+        if (closestInteractable != null)
+        {
+            SetNewCurrentInteractable(closestInteractable);
+        }
+        else // Jika tidak ada objek interactable di dalam area
         {
             DisableCurrentInteractable();
         }
+    }
+
+    // Untuk debugging visual di Scene view
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Vector3 checkPosition = transform.position + (transform.forward * 1.0f);
+        float checkRadius = 1.5f;
+        Gizmos.DrawWireSphere(checkPosition, checkRadius);
     }
 
     void SetNewCurrentInteractable(Interactable newInteractable)
@@ -87,7 +87,12 @@ public class PlayerInteraction : MonoBehaviour
 
     void DisableCurrentInteractable()
     {
-        HUDController.instance.DisableInteractionText();
+        // Pastikan kita memanggil fungsi untuk menonaktifkan teks di HUD
+        if (HUDController.instance != null)
+        {
+            HUDController.instance.DisableInteractionText();
+        }
+
         if (currentInteractable != null)
         {
             currentInteractable.DisableOutline();
