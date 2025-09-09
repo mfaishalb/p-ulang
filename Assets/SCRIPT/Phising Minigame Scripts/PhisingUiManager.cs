@@ -83,18 +83,21 @@ public class PhishingUIManager : MonoBehaviour
 
         selectedEmailEntry = emailEntry;
         selectedEmailEntry.SetSelected(true);
+        Debug.Log("Pressed");
     }
 
     private void OnPhishingButton()
     {
         if (selectedEmailEntry == null) return;
         CheckAnswer(true);
+        Debug.Log("Phishing Button Pressed");
     }
 
     private void OnLegitimateButton()
     {
         if (selectedEmailEntry == null) return;
         CheckAnswer(false);
+        Debug.Log("Legitimate Button Pressed");
     }
 
     private void CheckAnswer(bool playerChoiceIsPhishing)
@@ -103,8 +106,7 @@ public class PhishingUIManager : MonoBehaviour
         //selectedEmailEntry.ShowFeedback(isCorrect);
         if (selectedEmailEntry.emailData.isPhising == playerChoiceIsPhishing)
         {
-            if(!correctEmails.Contains(selectedEmailEntry.emailData))
-                correctEmails.Add(selectedEmailEntry.emailData);
+            correctEmails.Add(selectedEmailEntry.emailData);
             Debug.Log("Correct! Total correct: " + correctEmails.Count);
         }
         else
@@ -128,10 +130,9 @@ public class PhishingUIManager : MonoBehaviour
         
         inboxPanel.SetActive(false);
 
-        emailTerminal = null;
-
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Debug.Log("Close Button Pressed");
     }
 }

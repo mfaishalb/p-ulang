@@ -3,18 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EmailTerminal : MonoBehaviour, Iinteractable
+public class EmailTerminal : Interactable
 {
-    [SerializeField] private string _prompt;
-
-    public string InteractionPrompt => _prompt;
-
-
     [Header("Email Content")]
     public List<EmailData> emails;
     public int EmailCount = 4;
 
-    public bool Interact(Interactor interactor)
+    public override void Interact()
     {
         List<int> selectedEmailsIndex = new();
         List<EmailData> selectedEmails = new();
@@ -35,12 +30,10 @@ public class EmailTerminal : MonoBehaviour, Iinteractable
         if (PhishingUIManager.instance != null)
         {
             PhishingUIManager.instance.ShowInbox(selectedEmails, this);
-            return true;
         }
         else
         {
             Debug.LogWarning("PhishingUIManager instance is not set.");
-            return false;
         }
     }
 }
