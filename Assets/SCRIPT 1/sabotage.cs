@@ -1,79 +1,62 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
-// SabotageableObject adalah sebuah Interactable, tapi dengan fitur tambahan.
 public class SabotageableObject : Interactable
 {
     [Header("Sabotage Settings")]
-    // Drag & drop GameObject tanda seru "!" ke sini di Inspector
     public GameObject sabotageIndicator;
-    public string sabotageMessage = "Perbaiki kerusakan"; // Pesan saat disabotase
+    public string sabotageMessage = "Perbaiki kerusakan";
 
     private bool isSabotaged = false;
+    private Mission attachedMission; // Variabel untuk menyimpan 'kaset' misinya
 
-    [Header("Minigame Settings")]
-    public string minigameSceneName;
-
-    // Kita gunakan Start dari parent, tapi tambahkan logika kita sendiri.
-    void Start()
+    void Awake() // Ganti Start jadi Awake agar dieksekusi lebih dulu
     {
-        // Pastikan outline didapatkan dari kelas dasar (Interactable)
         outline = GetComponent<Outline>();
-        DisableOutline(); // Ini fungsi dari Interactable
+        DisableOutline();
 
-        // Logika tambahan khusus untuk SabotageableObject
         if (sabotageIndicator != null)
-        {
             sabotageIndicator.SetActive(false);
-        }
-    }
 
-    // Fungsi ini akan dipanggil oleh SabotageManager
-    public void ActivateSabotage()
-    {
-        isSabotaged = true;
-        message = sabotageMessage; // Ganti pesan interaksi saat disabotase
-        if (sabotageIndicator != null)
+        // Cari 'kaset' misi yang terpasang pada objek ini
+        attachedMission = GetComponent<Mission>();
+        if (attachedMission != null)
         {
-            sabotageIndicator.SetActive(true);
-        }
-    }
-
-    // Kita 'menimpa' fungsi Interact() dari parent dengan logika baru
-    public override void Interact()
-    {
-        if (!isSabotaged)
-        {
-            Debug.Log(gameObject.name + " sedang tidak rusak.");
-            return;
-        }
-
-        // JANGAN panggil Resolve() di sini lagi.
-        // Panggil GameManager untuk memulai minigame.
-        if (GameManager.instance != null && !string.IsNullOrEmpty(minigameSceneName))
-        {
-            GameManager.instance.StartMinigame(minigameSceneName, this);
+            // Inisialisasi misi dan beritahu siapa pemiliknya
+            attachedMission.Initialize(this);
         }
         else
         {
-            Debug.LogError("GameManager tidak ditemukan atau nama scene minigame kosong!");
+            Debug.LogError("Objek " + gameObject.name + " bisa disabotase tapi tidak punya skrip Misi!");
         }
     }
 
-    // Ubah nama Resolve() agar lebih jelas dan buat jadi public
-    // Fungsi ini sekarang akan dipanggil oleh GameManager
+    public void ActivateSabotage()
+    {
+        isSabotaged = true;
+        message = sabotageMessage;
+        if (sabotageIndicator != null)
+            sabotageIndicator.SetActive(true);
+    }
+
+    public override void Interact()
+    {
+        if (!isSabotaged) return;
+
+        // Cukup jalankan misi yang terpasang!
+        if (attachedMission != null)
+        {
+            attachedMission.StartMission();
+        }
+    }
+
+    // Fungsi ini dipanggil oleh Misi atau GameManager saat sabotase selesai
     public void ResolveSabotage()
     {
         isSabotaged = false;
         if (sabotageIndicator != null)
-        {
             sabotageIndicator.SetActive(false);
-        }
 
-        // LAPOR KEMBALI KE MANAJER SABOTASE BAHWA SEMUA BERES!
         if (SabotageManager.instance != null)
-        {
             SabotageManager.instance.SabotageResolved();
-        }
     }
 }
