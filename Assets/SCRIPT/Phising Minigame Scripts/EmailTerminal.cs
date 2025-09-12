@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EmailTerminal : Interactable
+public class EmailTerminal : SabotageableObject
 {
     [Header("Email Content")]
     public List<EmailData> emails;
@@ -11,6 +11,8 @@ public class EmailTerminal : Interactable
 
     public override void Interact()
     {
+        if (!isSabotaged) return;
+
         List<int> selectedEmailsIndex = new();
         List<EmailData> selectedEmails = new();
 

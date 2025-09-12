@@ -11863,7 +11863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sabotageableObjects:
   - {fileID: 2025019380}
-  - {fileID: 2025019380}
+  - {fileID: 1720032000}
   timeBetweenSabotages: 20
   sabotageDuration: 30
 --- !u!224 &748665929
@@ -30435,22 +30435,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05252e85eee3dd4f921a92590a0c8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: HHAHAA
+  message: 
   onInteraction:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: b05252e85eee3dd4f921a92590a0c8bd, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  sabotageIndicator: {fileID: 0}
+  sabotageMessage: Perbaiki kerusakan
   emails:
   - {fileID: 11400000, guid: dfaa3ff9cf535f04fa3df698ffe87431, type: 2}
   - {fileID: 11400000, guid: 68a26f0c88bfc9944a329fc24a7dd0c8, type: 2}
@@ -30461,24 +30451,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9e153b2d627878141b0a9dd3a87b10ea, type: 2}
   - {fileID: 11400000, guid: 832e6af8e1443304791d5555ca80965b, type: 2}
   EmailCount: 4
---- !u!114 &1720032004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20719729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &1720136101
 GameObject:
   m_ObjectHideFlags: 0
@@ -35221,9 +35193,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 116326, guid: 82c3b8fcabff82d4787f83e992e386df, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1720032000}
-    - targetCorrespondingSourceObject: {fileID: 116326, guid: 82c3b8fcabff82d4787f83e992e386df, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1720032004}
   m_SourcePrefab: {fileID: 100100000, guid: 82c3b8fcabff82d4787f83e992e386df, type: 3}
 --- !u!4 &1982091558 stripped
 Transform:
@@ -35771,7 +35740,6 @@ MonoBehaviour:
         m_CallState: 2
   sabotageIndicator: {fileID: 181121009}
   sabotageMessage: Perbaiki kerusakan
-  minigameSceneName: Game 2
 --- !u!4 &2027719536 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 465872, guid: 790e191d50e6fe249900e78369ae7986, type: 3}

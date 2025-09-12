@@ -26,7 +26,7 @@ public class PhishingUIManager : MonoBehaviour
     public Button closeButton;
 
     private EmailEntryUi selectedEmailEntry;
-    private List<EmailData> correctEmails = new();
+    private List<EmailData> inCorrectEmails = new();
     private EmailTerminal emailTerminal;
 
     void Awake()
@@ -53,7 +53,7 @@ public class PhishingUIManager : MonoBehaviour
     public void ShowInbox(List<EmailData> emails, EmailTerminal terminal)
     {
         emailTerminal = terminal;
-        correctEmails.Clear();
+        inCorrectEmails.Clear();
 
         foreach (Transform child in emailGridContainer)
         {
@@ -104,10 +104,10 @@ public class PhishingUIManager : MonoBehaviour
     {
         //bool isCorrect = selectedEmailEntry.emailData.isPhising == playerChoiceIsPhishing;
         //selectedEmailEntry.ShowFeedback(isCorrect);
-        if (selectedEmailEntry.emailData.isPhising == playerChoiceIsPhishing)
+        if (selectedEmailEntry.emailData.isPhising != playerChoiceIsPhishing)
         {
-            correctEmails.Add(selectedEmailEntry.emailData);
-            Debug.Log("Correct! Total correct: " + correctEmails.Count);
+            inCorrectEmails.Add(selectedEmailEntry.emailData);
+            Debug.Log("Correct! Total correct: " + inCorrectEmails.Count);
         }
         else
         {
@@ -120,12 +120,12 @@ public class PhishingUIManager : MonoBehaviour
 
     private void OnCloseButton()
     {
-        if (emailTerminal != null && correctEmails.Count < emailTerminal.EmailCount)
+        if (emailTerminal != null && inCorrectEmails.Count > 1)
         {
             Debug.Log("Ulangi");
         } else
         {
-            Debug.Log("Selesai");
+            emailTerminal.ResolveSabotage();
         }
         
         inboxPanel.SetActive(false);

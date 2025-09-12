@@ -6,7 +6,7 @@ public class SabotageableObject : Interactable
     public GameObject sabotageIndicator;
     public string sabotageMessage = "Perbaiki kerusakan";
 
-    private bool isSabotaged = false;
+    protected bool isSabotaged = false;
     private Mission attachedMission; // Variabel untuk menyimpan 'kaset' misinya
 
     void Awake() // Ganti Start jadi Awake agar dieksekusi lebih dulu
@@ -59,4 +59,9 @@ public class SabotageableObject : Interactable
         if (SabotageManager.instance != null)
             SabotageManager.instance.SabotageResolved();
     }
+
+    public bool IsSabotaged()
+    {
+        return isSabotaged;
+    }   
 }
