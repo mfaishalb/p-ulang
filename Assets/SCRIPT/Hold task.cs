@@ -1,6 +1,5 @@
-using System.Reflection;
 using UnityEngine;
-using UnityEngine.UI; // Jangan lupa tambahkan ini untuk UI
+using UnityEngine.UI;
 
 public class Mission_HoldKey : Mission
 {
@@ -8,22 +7,29 @@ public class Mission_HoldKey : Mission
     public float holdDuration = 3f;
     public KeyCode interactionKey = KeyCode.F;
 
-    [Header("UI")]
+    [Header("References")]
+    [Tooltip("Animator yang akan memutar animasi perbaikan")]
+    public Animator targetAnimator; // BARIS BARU: Referensi ke animator
     [Tooltip("Drag UI Image dengan tipe Filled di sini")]
-    public Image progressBar; // Untuk visual progress
+    public Image progressBar;
 
     private float holdTimer = 0f;
+    private bool isCurrentlyHolding = false; // BARIS BARU: Untuk melacak status hold
 
     void Start()
     {
-        // Pastikan progress bar disembunyikan di awal
         if (progressBar != null)
         {
             progressBar.gameObject.SetActive(false);
         }
+
+        // BARIS BARU: Pastikan animator ada
+        if (targetAnimator == null)
+        {
+            Debug.LogWarning("Target Animator belum di-assign di " + gameObject.name);
+        }
     }
 
-    // Untuk misi jenis ini, StartMission() hanya mengaktifkan UI
     public override void StartMission()
     {
         Debug.Log("Misi Tahan Tombol Dimulai!");
@@ -31,18 +37,24 @@ public class Mission_HoldKey : Mission
         {
             progressBar.gameObject.SetActive(true);
         }
-        holdTimer = 0f; // Reset timer setiap kali interaksi
+        holdTimer = 0f;
+        isCurrentlyHolding = false; // Reset status hold
     }
 
-    // Logika utamanya ada di Update!
     void Update()
     {
-        // Jika progress bar tidak aktif, jangan lakukan apa-apa
         if (progressBar == null || !progressBar.gameObject.activeSelf) return;
 
-        // Cek jika player menahan tombol
+        // Saat tombol F ditahan
         if (Input.GetKey(interactionKey))
         {
+            // Set parameter animator ke true (HANYA jika belum di-set)
+            if (!isCurrentlyHolding && targetAnimator != null)
+            {
+                isCurrentlyHolding = true;
+                targetAnimator.SetBool("isHolding", true); // BARIS BARU: Mulai animasi
+            }
+
             holdTimer += Time.deltaTime;
             progressBar.fillAmount = holdTimer / holdDuration;
 
@@ -50,12 +62,26 @@ public class Mission_HoldKey : Mission
             {
                 Debug.Log("Misi Tahan Tombol Selesai!");
                 progressBar.gameObject.SetActive(false);
-                owner.ResolveSabotage(); // Beri tahu 'pemilik' bahwa misi sukses!
+
+                // BARIS BARU: Hentikan animasi sebelum resolve
+                if (targetAnimator != null)
+                {
+                    targetAnimator.SetBool("isHolding", false);
+                }
+
+                owner.ResolveSabotage();
             }
         }
-        // Jika tombol dilepas, reset progress
+        // Saat tombol F dilepas (cancel)
         else if (Input.GetKeyUp(interactionKey))
         {
+            // Set parameter animator ke false
+            if (isCurrentlyHolding && targetAnimator != null)
+            {
+                isCurrentlyHolding = false;
+                targetAnimator.SetBool("isHolding", false); // BARIS BARU: Hentikan/balikkan animasi
+            }
+
             holdTimer = 0f;
             progressBar.fillAmount = 0f;
         }
