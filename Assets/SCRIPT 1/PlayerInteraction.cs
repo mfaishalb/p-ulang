@@ -6,11 +6,14 @@ public class PlayerInteraction : MonoBehaviour
 {
     public float playerReach = 3f;
     Interactable currentInteractable;
-    private Camera playerCamera; // cache kamera sekali
+    private Camera playerCamera;
+
+    // BARIS BARU: Variabel publik yang bisa diakses dari skrip lain
+    public static Interactable currentInteractablePublic;
 
     void Start()
     {
-        playerCamera = Camera.main; // pastikan kamera bertag MainCamera
+        playerCamera = Camera.main;
     }
 
     void Update()
@@ -21,22 +24,19 @@ public class PlayerInteraction : MonoBehaviour
         {
             currentInteractable.Interact();
         }
-       
     }
 
     void CheckInteraction()
     {
-        // Tentukan titik pusat untuk 'bola' pengecekan, misalnya sedikit di depan pemain
-        Vector3 checkPosition = transform.position + (transform.forward * 1.0f); // 1m di depan pemain
-        float checkRadius = 1.5f; // Radius 'bola' pengecekan
+        // Logika OverlapSphere-mu sudah bagus, tidak perlu diubah
+        Vector3 checkPosition = transform.position + (transform.forward * 1.0f);
+        float checkRadius = 3f;
 
-        // Dapatkan semua collider yang masuk ke dalam 'bola'
         Collider[] colliders = Physics.OverlapSphere(checkPosition, checkRadius);
 
         Interactable closestInteractable = null;
         float minDistance = float.MaxValue;
 
-        // Cari objek interactable terdekat dari semua yang terdeteksi
         foreach (Collider col in colliders)
         {
             if (col.CompareTag("Interactable"))
@@ -54,23 +54,21 @@ public class PlayerInteraction : MonoBehaviour
             }
         }
 
-        // Jika kita menemukan objek interactable terdekat
         if (closestInteractable != null)
         {
             SetNewCurrentInteractable(closestInteractable);
         }
-        else // Jika tidak ada objek interactable di dalam area
+        else
         {
             DisableCurrentInteractable();
         }
     }
 
-    // Untuk debugging visual di Scene view
     void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
         Vector3 checkPosition = transform.position + (transform.forward * 1.0f);
-        float checkRadius = 1.5f;
+        float checkRadius = 3f;
         Gizmos.DrawWireSphere(checkPosition, checkRadius);
     }
 
@@ -82,12 +80,14 @@ public class PlayerInteraction : MonoBehaviour
             currentInteractable = newInteractable;
             currentInteractable.EnableOutline();
             HUDController.instance.EnableInteractionText(currentInteractable.message);
+
+            // BARIS BARU: Update variabel publik saat ada interaksi baru
+            currentInteractablePublic = currentInteractable;
         }
     }
 
     void DisableCurrentInteractable()
     {
-        // Pastikan kita memanggil fungsi untuk menonaktifkan teks di HUD
         if (HUDController.instance != null)
         {
             HUDController.instance.DisableInteractionText();
@@ -97,6 +97,9 @@ public class PlayerInteraction : MonoBehaviour
         {
             currentInteractable.DisableOutline();
             currentInteractable = null;
+
+            // BARIS BARU: Update variabel publik saat tidak ada interaksi
+            currentInteractablePublic = null;
         }
     }
 }

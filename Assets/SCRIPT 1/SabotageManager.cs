@@ -34,7 +34,7 @@ public class SabotageManager : MonoBehaviour
         {
             // Jika ada sabotase aktif, jalankan timer Game Over
             sabotageTimer -= Time.deltaTime;
-            Debug.Log("Waktu tersisa: " + sabotageTimer); // Untuk debug
+            //Debug.Log("Waktu tersisa: " + sabotageTimer); // Untuk debug
 
             if (sabotageTimer <= 0)
             {

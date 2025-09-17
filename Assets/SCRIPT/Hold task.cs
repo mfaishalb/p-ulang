@@ -16,6 +16,12 @@ public class Mission_HoldKey : Mission
     private float holdTimer = 0f;
     private bool isCurrentlyHolding = false; // BARIS BARU: Untuk melacak status hold
 
+    private CCTVCamera parentCamera;
+
+    void Awake()
+    {
+        parentCamera = GetComponent<CCTVCamera>();
+    }
     void Start()
     {
         if (progressBar != null)
@@ -42,7 +48,9 @@ public class Mission_HoldKey : Mission
     }
 
     void Update()
+
     {
+        if (!this.enabled) return;
         if (progressBar == null || !progressBar.gameObject.activeSelf) return;
 
         // Saat tombol F ditahan
@@ -69,7 +77,8 @@ public class Mission_HoldKey : Mission
                     targetAnimator.SetBool("isHolding", false);
                 }
 
-                owner.ResolveSabotage();
+                parentCamera.ReportRepairComplete();
+                this.enabled = false;
             }
         }
         // Saat tombol F dilepas (cancel)

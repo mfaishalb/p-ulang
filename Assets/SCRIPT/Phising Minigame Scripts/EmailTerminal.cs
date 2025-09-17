@@ -31,7 +31,7 @@ public class EmailTerminal : SabotageableObject
 
         if (PhishingUIManager.instance != null)
         {
-            PhishingUIManager.instance.ShowInbox(selectedEmails, this);
+            //PhishingUIManager.instance.ShowInbox(selectedEmails, this);
         }
         else
         {
