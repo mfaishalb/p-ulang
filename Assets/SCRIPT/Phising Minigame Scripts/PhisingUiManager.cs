@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PhishingUIManager : MonoBehaviour
 {
@@ -19,42 +20,37 @@ public class PhishingUIManager : MonoBehaviour
     public Button phishingButton;
     public Button closeButton;
 
+    [Header("Email Details Panel")]
+    public GameObject detailsPanel;
+    public TMP_Text detailsSenderText;
+    public TMP_Text detailsSubjectText;
+    public TMP_Text detailsBodyText;
+
     private EmailEntryUi selectedEmailEntry;
-    // VARIABEL DIUBAH: Sekarang kita menyimpan referensi ke misi, bukan terminal
     private Mission_PhishingEmail currentMission;
 
     void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
     }
 
     void Start()
     {
         inboxPanel.SetActive(false);
+        if (detailsPanel != null) detailsPanel.SetActive(false);
+
+        // Sambungkan listener ke fungsi yang akan kita buat di bawah
         phishingButton.onClick.AddListener(OnPhishingButton);
         legitimateButton.onClick.AddListener(OnLegitimateButton);
-        closeButton.onClick.AddListener(HideInbox); // Tombol close sekarang hanya menutup panel
+        closeButton.onClick.AddListener(HideInbox);
     }
 
-    // FUNGSI DIUBAH: Parameter sekarang menerima Mission_PhishingEmail
     public void ShowInbox(List<EmailData> emails, Mission_PhishingEmail mission)
     {
         currentMission = mission;
 
-        // Membersihkan email dari sesi sebelumnya
-        foreach (Transform child in emailGridContainer)
-        {
-            Destroy(child.gameObject);
-        }
-
-        // Membuat entri email baru
+        foreach (Transform child in emailGridContainer) Destroy(child.gameObject);
         foreach (EmailData email in emails)
         {
             GameObject emailObject = Instantiate(emailEntryPrefab, emailGridContainer);
@@ -63,8 +59,8 @@ public class PhishingUIManager : MonoBehaviour
 
         inboxPanel.SetActive(true);
         selectedEmailEntry = null;
+        if (detailsPanel != null) detailsPanel.SetActive(false);
 
-        // Jeda game dan tampilkan cursor
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -78,8 +74,19 @@ public class PhishingUIManager : MonoBehaviour
         }
         selectedEmailEntry = emailEntry;
         selectedEmailEntry.SetSelected(true);
+        ShowEmailDetails(emailEntry.emailData);
     }
 
+    private void ShowEmailDetails(EmailData data)
+    {
+        if (detailsPanel == null) return;
+        detailsPanel.SetActive(true);
+        if (detailsSenderText != null) detailsSenderText.text = "From: " + data.emailSender;
+        if (detailsSubjectText != null) detailsSubjectText.text = "Subject: " + data.emailSubject;
+        if (detailsBodyText != null) detailsBodyText.text = data.emailBody;
+    }
+
+    // --- FUNGSI BARU YANG DITAMBAHKAN UNTUK MENGATASI ERROR ---
     private void OnPhishingButton()
     {
         if (selectedEmailEntry == null) return;
@@ -92,49 +99,34 @@ public class PhishingUIManager : MonoBehaviour
         CheckAnswer(false);
     }
 
-    // LOGIKA DIUBAH TOTAL: Sekarang lebih jelas dan langsung memanggil misi
     private void CheckAnswer(bool playerChoiceIsPhishing)
     {
         if (selectedEmailEntry == null) return;
 
-        // Cek apakah jawaban player sesuai dengan tipe email sebenarnya
         bool isCorrect = selectedEmailEntry.emailData.isPhising == playerChoiceIsPhishing;
-
-        // Beri feedback visual di entri email (hijau jika benar, merah jika salah)
         selectedEmailEntry.ShowFeedback(isCorrect);
 
         if (isCorrect)
         {
-            Debug.Log("Jawaban Benar!");
-            // Panggil fungsi di misi untuk menambah progres
             if (currentMission != null)
             {
                 currentMission.OnCorrectAnswer();
             }
         }
-        else
-        {
-            Debug.Log("Jawaban Salah!");
-            // Di sini kamu bisa menambahkan penalti, misal mengurangi waktu sabotase
-        }
 
-        selectedEmailEntry = null; // Reset pilihan
+        selectedEmailEntry = null;
     }
 
-    // FUNGSI DIUBAH: Sekarang hanya untuk menutup panel dan melanjutkan game
     public void HideInbox()
     {
-        // PANGGIL FUNGSI DI MISI SEBELUM MENUTUP
         if (currentMission != null)
         {
             currentMission.OnInboxClosed();
         }
-
         inboxPanel.SetActive(false);
-
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        Debug.Log("Close Button Pressed");
     }
+    // --------------------------------------------------------
 }

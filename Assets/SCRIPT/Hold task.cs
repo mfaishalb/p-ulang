@@ -48,9 +48,7 @@ public class Mission_HoldKey : Mission
     }
 
     void Update()
-
     {
-        if (!this.enabled) return;
         if (progressBar == null || !progressBar.gameObject.activeSelf) return;
 
         // Saat tombol F ditahan
