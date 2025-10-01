@@ -29,6 +29,9 @@ public class PhishingUIManager : MonoBehaviour
     private EmailEntryUi selectedEmailEntry;
     private Mission_PhishingEmail currentMission;
 
+    [HideInInspector]
+    public int currentAnswered = 0;
+
     void Awake()
     {
         if (instance == null) instance = this;
@@ -48,6 +51,7 @@ public class PhishingUIManager : MonoBehaviour
 
     public void ShowInbox(List<EmailData> emails, Mission_PhishingEmail mission)
     {
+        Debug.Log("Showing inbox with " + emails.Count + " emails.");
         currentMission = mission;
 
         foreach (Transform child in emailGridContainer) Destroy(child.gameObject);
@@ -102,6 +106,7 @@ public class PhishingUIManager : MonoBehaviour
     private void CheckAnswer(bool playerChoiceIsPhishing)
     {
         if (selectedEmailEntry == null) return;
+        currentAnswered++;
 
         bool isCorrect = selectedEmailEntry.emailData.isPhising == playerChoiceIsPhishing;
         selectedEmailEntry.ShowFeedback(isCorrect);

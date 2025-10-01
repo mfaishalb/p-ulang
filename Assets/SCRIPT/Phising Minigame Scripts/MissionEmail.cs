@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Mission_PhishingEmail : Mission
@@ -7,6 +8,9 @@ public class Mission_PhishingEmail : Mission
     public List<EmailData> allEmails; // Database semua email yang mungkin muncul
     public int emailsToShow = 4;
     public int requiredCorrectAnswers = 3;
+
+    [Header("Progress Tracking")]
+    public TMP_Text trackProgressText;
 
     private int currentCorrectAnswers = 0;
 
@@ -19,6 +23,8 @@ public class Mission_PhishingEmail : Mission
         // --- Logika memilih email acak (dari skrip lamamu) ---
         List<EmailData> selectedEmails = new List<EmailData>();
         List<int> selectedEmailsIndex = new List<int>();
+
+        
 
         if (allEmails != null && allEmails.Count > 0)
         {
@@ -50,9 +56,10 @@ public class Mission_PhishingEmail : Mission
     {
         currentCorrectAnswers++;
         Debug.Log("Jawaban benar! Progres: " + currentCorrectAnswers + "/" + requiredCorrectAnswers);
+        UpdateProgressUI();
 
         // Cek apakah misi sudah selesai
-        if (currentCorrectAnswers >= requiredCorrectAnswers)
+        if (currentCorrectAnswers >= requiredCorrectAnswers || PhishingUIManager.instance.currentAnswered == emailsToShow)
         {
             Debug.Log("Misi Phising Selesai!");
 
@@ -70,5 +77,13 @@ public class Mission_PhishingEmail : Mission
         Debug.Log("Pemain menutup inbox. Percobaan saat ini dibatalkan.");
         // Kita tidak perlu melakukan apa-apa di sini, karena kembalinya
         // Time.timeScale = 1f secara otomatis akan melanjutkan timer utama.
+    }
+
+    private void UpdateProgressUI()
+    {
+        if (trackProgressText != null)
+        {
+            trackProgressText.text = $"Progress: {currentCorrectAnswers}/{requiredCorrectAnswers}";
+        }
     }
 }
