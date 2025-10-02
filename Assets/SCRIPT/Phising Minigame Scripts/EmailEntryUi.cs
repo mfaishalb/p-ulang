@@ -46,6 +46,7 @@ public class EmailEntryUi : MonoBehaviour
 
     private void OnSelect()
     {
+        Debug.Log("Selected email: " + emailData.emailTitle);
         uiManager.SelectEmail(this);
     }
 
