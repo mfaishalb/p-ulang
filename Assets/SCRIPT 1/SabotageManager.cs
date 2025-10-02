@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SabotageManager : MonoBehaviour
 {
+    public DialogueData Welcome;
     public static SabotageManager instance;
 
     // Masukkan semua objek yang bisa disabotase ke list ini melalui Inspector
@@ -38,8 +39,14 @@ public class SabotageManager : MonoBehaviour
 
             if (sabotageTimer <= 0)
             {
-                GameOver();
-                isSabotageActive = false; // Hentikan proses update
+                Debug.Log("Waktu sabotase habis! Data Center menerima kerusakan!");
+
+                // Panggil fungsi TakeDamage() dari DataCenterHealth
+                DataCenterHealth.instance.TakeDamage(10f); // Contoh: setiap gagal, health berkurang 25
+
+                // Selesaikan sabotase saat ini agar bisa mulai sabotase baru
+                // dan timer tidak terus-terusan memberi damage.
+                SabotageResolved();
             }
         }
         else
@@ -69,12 +76,14 @@ public class SabotageManager : MonoBehaviour
 
         // Reset timer Game Over
         sabotageTimer = sabotageDuration;
+
     }
 
     // Fungsi ini akan dipanggil oleh objek yang sudah diperbaiki
     public void SabotageResolved()
     {
         Debug.Log("Sabotase berhasil diperbaiki!");
+        DialogueManager.instance.ShowDialogue(Welcome);
         isSabotageActive = false;
         // Reset timer untuk sabotase berikutnya
         timeUntilNextSabotage = timeBetweenSabotages;

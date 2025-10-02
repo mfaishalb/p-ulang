@@ -6,7 +6,7 @@
 public class PlayerController : MonoBehaviour
 {
     [Header("Refs")]
-    public Transform cameraTransform; // drag Main Camera kalau mau
+    public Transform cameraTransform;
     public Transform rightGunBone;
     public Transform leftGunBone;
     public Arsenal[] arsenal;
@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     public float walkSpeed = 3.5f;
     public float runSpeed = 6.5f;
     public float rotationLerp = 12f;
+
+    // BARIS BARU: Tambahkan variabel untuk pengali kecepatan
+    private float speedMultiplier = 1f; // 1f = 100% kecepatan
 
     [Header("Jump & Gravity")]
     public float jumpHeight = 1.2f;
@@ -30,6 +33,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        // ... (Fungsi Awake tidak berubah) ...
         controller = GetComponent<CharacterController>();
         actions = GetComponent<Actions>();
         animator = GetComponent<Animator>();
@@ -43,6 +47,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // ... (Semua logika dari Ground Check sampai Camera Relative Movement tidak berubah) ...
+
         // ===== Ground Check =====
         isGrounded = controller.isGrounded;
         if (isGrounded && velocity.y < 0f)
@@ -70,8 +76,14 @@ public class PlayerController : MonoBehaviour
         }
 
         // ===== Apply Horizontal Movement =====
-        float currentSpeed = isRunning ? runSpeed : walkSpeed;
+        float baseSpeed = isRunning ? runSpeed : walkSpeed;
+
+        // DIUBAH: Kalikan kecepatan dasar dengan pengali
+        float currentSpeed = baseSpeed * speedMultiplier;
+
         controller.Move(moveDir * currentSpeed * Time.deltaTime);
+
+        // ... (Sisa dari Update() tidak berubah) ...
 
         // ===== Animator Movement =====
         if (hasMove)
@@ -111,7 +123,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K)) actions.Death();
     }
 
-    // ===== Arsenal Logic (dari script lama) =====
+    // --- FUNGSI BARU: Ini adalah "saklar" untuk PlayerEnergy ---
+    public void SetSpeedMultiplier(float multiplier)
+    {
+        this.speedMultiplier = multiplier;
+        Debug.Log("Speed multiplier diubah menjadi: " + multiplier);
+    }
+    // -----------------------------------------------------------
+
+    // ... (Fungsi SetArsenal dan struct Arsenal tidak berubah) ...
     public void SetArsenal(string name)
     {
         foreach (Arsenal hand in arsenal)
