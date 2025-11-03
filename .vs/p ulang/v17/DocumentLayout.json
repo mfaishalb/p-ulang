@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Muhammad Faishal\\p ulang\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|c:\\users\\muhammad faishal\\p ulang\\assets\\script\\door_3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\door_3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|c:\\users\\muhammad faishal\\p ulang\\assets\\script\\bubble dialog\\dialog manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E94D847-5729-717C-B69E-943525B35CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\bubble dialog\\dialog manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -162,7 +166,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Hold task.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\Hold task.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\Hold task.cs",
@@ -176,19 +180,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "door_3.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\door_3.cs",
+              "RelativeDocumentMoniker": "Assets\\SCRIPT\\door_3.cs",
+              "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\door_3.cs",
+              "RelativeToolTip": "Assets\\SCRIPT\\door_3.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAswBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T14:31:01.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "dialog manager.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\bubble dialog\\dialog manager.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\bubble dialog\\dialog manager.cs",
               "ToolTip": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\bubble dialog\\dialog manager.cs",
               "RelativeToolTip": "Assets\\SCRIPT\\bubble dialog\\dialog manager.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAA0wBkAAAA3AAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAswEwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-29T13:34:50.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "dialog.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\bubble dialog\\dialog.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\bubble dialog\\dialog.cs",
@@ -196,12 +213,11 @@
               "RelativeToolTip": "Assets\\SCRIPT\\bubble dialog\\dialog.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T13:33:36.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-29T13:33:36.023Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "HealthSys.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\HealthSys.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\HealthSys.cs",
@@ -213,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "EmailData.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\Phising Minigame Scripts\\EmailData.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\Phising Minigame Scripts\\EmailData.cs",
@@ -225,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "PlayerInteraction.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\PlayerInteraction.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\PlayerInteraction.cs",
@@ -237,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Interactable.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\Interactable.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\Interactable.cs",
@@ -249,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "sabotage.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\sabotage.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\sabotage.cs",
@@ -257,12 +273,11 @@
               "RelativeToolTip": "Assets\\SCRIPT 1\\sabotage.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T05:32:51.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T05:32:51.208Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "SabotageManager.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\SabotageManager.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\SabotageManager.cs",
@@ -270,12 +285,11 @@
               "RelativeToolTip": "Assets\\SCRIPT 1\\SabotageManager.cs",
               "ViewState": "AQIAAEoAAAAAAAAAAAAgwFgAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T05:30:25.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T05:30:25.097Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "playerenergy.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\playerenergy.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\playerenergy.cs",
@@ -287,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "PhisingUiManager.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\Phising Minigame Scripts\\PhisingUiManager.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\Phising Minigame Scripts\\PhisingUiManager.cs",
@@ -299,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "EmailEntryUi.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\Phising Minigame Scripts\\EmailEntryUi.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\Phising Minigame Scripts\\EmailEntryUi.cs",
@@ -311,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "HoldkeyCCTV.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\CCTV Mission\\HoldkeyCCTV.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\CCTV Mission\\HoldkeyCCTV.cs",
@@ -323,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "MissionCCTV.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\CCTV Mission\\MissionCCTV.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\CCTV Mission\\MissionCCTV.cs",
@@ -335,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "CCTV.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\CCTV Mission\\CCTV.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\CCTV Mission\\CCTV.cs",
@@ -347,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "cctvUI.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\CCTV Mission\\cctvUI.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\CCTV Mission\\cctvUI.cs",
@@ -359,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "MissionEmail.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\Phising Minigame Scripts\\MissionEmail.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\Phising Minigame Scripts\\MissionEmail.cs",
@@ -371,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Interactor.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\Phising Minigame Scripts\\Interactor.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\Phising Minigame Scripts\\Interactor.cs",
@@ -383,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "LoadsceneTask\u0027.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\LoadsceneTask\u0027.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\LoadsceneTask\u0027.cs",
@@ -395,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "EmailTerminal.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\Phising Minigame Scripts\\EmailTerminal.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\Phising Minigame Scripts\\EmailTerminal.cs",
@@ -407,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "GameStateManager1.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\GameStateManager1.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\GameStateManager1.cs",
@@ -419,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Main.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\Main.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\Main.cs",
@@ -431,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "MinigameSetting.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\MinigameSetting.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\MinigameSetting.cs",
@@ -443,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "CCTV.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\CCTV.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\CCTV.cs",
@@ -455,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "CCTVmanager.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\CCTVmanager.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\CCTVmanager.cs",
@@ -467,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "cctvUI.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\cctvUI.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\cctvUI.cs",
@@ -479,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "MissionCCTV.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\MissionCCTV.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\MissionCCTV.cs",
@@ -491,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Mission.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\Mission.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\Mission.cs",
@@ -503,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "HUDController.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\HUDController.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\HUDController.cs",
@@ -515,7 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "Wire.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\Wire\\Wire.cs",
               "RelativeDocumentMoniker": "Assets\\Wire\\Wire.cs",
@@ -527,7 +541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "WiringManager.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\WiringManager.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\WiringManager.cs",
@@ -539,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "wirenode.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\wirenode.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\wirenode.cs",
@@ -551,7 +565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "NewBehaviourScript.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\NewBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\NewBehaviourScript.cs",
@@ -562,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "npcmale.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\MALENPC\\npcmale.cs",
               "RelativeDocumentMoniker": "Assets\\MALENPC\\npcmale.cs",
@@ -574,7 +588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT 1\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT 1\\PlayerMovement.cs",
@@ -586,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "Actions.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\SCRIPT\\Actions.cs",
               "RelativeDocumentMoniker": "Assets\\SCRIPT\\Actions.cs",
@@ -598,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "Actions.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Faishal\\p ulang\\Assets\\Yurowm\\Demo\\Scripts\\Actions.cs",
               "RelativeDocumentMoniker": "Assets\\Yurowm\\Demo\\Scripts\\Actions.cs",
